@@ -7,6 +7,7 @@
 FILE_OUTPUT <- "full/path/of/your/directory"
 
 #' INSTALL PACKAGE IF NOT DONE ALREADY
+# devtools::install_github("OehlingerP/NotAllOilTypesAreAlike")
 
 # DO NOT CHANGE SCRIPT FROM HERE
 library(NotAllOilTypesAreAlike)
