@@ -9,4 +9,4 @@ Recognizing that many economists may not be familiar with R's package framework,
 
 ## How to install
 
-Just run `devtools::install_github(OehlingerP/NotAllOilTypesAreAlike)`. If `devtools` is not yet install you need to run `install.packages("devtools")` before.
+Just run `devtools::install_github("OehlingerP/NotAllOilTypesAreAlike")`. If `devtools` is not yet install you need to run `install.packages("devtools")` before.
