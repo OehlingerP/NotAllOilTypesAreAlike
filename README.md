@@ -5,4 +5,8 @@ This repository is organized as an R package, facilitating convenient reuse. All
 
 ## For Economists
 
-Recognizing that many economists may not be familiar with R's package framework, I've included the code in a format standard in our profession. In the "work" folder, a master file is available, executing all subsequent files and generating the results reported in the paper. However, the primary advantage of having a package lies in its well-documented functions and ease of reuse, making it worthwhile to explore.
+Recognizing that many economists may not be familiar with R's package framework, I've included the code in a format standard in our profession. In the "work" folder, a master file is available, executing all subsequent files and generating the results reported in the paper.
+
+## How to install
+
+Just run `devtools::install_github(OehlingerP/NotAllOilTypesAreAlike)`. If `devtools` is not yet install you need to run `install.packages("devtools")` before.
