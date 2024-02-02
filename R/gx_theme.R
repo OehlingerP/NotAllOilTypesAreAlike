@@ -1,27 +1,27 @@
 #' Initialize my ggplot theme.
 #'
-#' @param plot ggplot object. By default Null and gx_theme can be assigned to plot but otherwise gx_theme will create it's own plot.
-#' @param print_x Show x-axis. By default TRUE.
-#' @param print_y Show y-axis. By default TRUE.
-#' @param legend_title Whether to include a legend title or not default is FALSE.
-#' @param legend_position Legend position. Default is bottom.
-#' @param text_size Fontsize. Default is 14.
-#' @param theme "dark" or "light" theme. Defaults to "light".
-#' @param text_colour Text colour. Default is black.
+#' @param plot ggplot object. By default Null and gx_theme can be assigned to plot but otherwise gx_theme will create its own plot.
+#' @param print_x Show x-axis. Default TRUE.
+#' @param print_y Show y-axis. Default TRUE.
+#' @param legend_title Whether to include a legend title or not default FALSE.
+#' @param legend_position Legend position. Default "bottom".
+#' @param text_size Fontsize. Default 14.
+#' @param theme "dark" or "light" theme. Default "light".
+#' @param text_colour Text colour. Default "black".
 #' @param legend_line_width Width of line in legend.
-#' @param rect_line_colours Colour of horizontal help lines. Default is #7F7F7F.
-#' @param rect_line_width Width of major grid lines. Different widths needed for various outputs; by default 0.0001.
-#' @param panel_background Background colour of plot area. Default is white.
-#' @param colours Colours that should be used for aes color in ggplot. Default is gx_colors(). If both aes, fill and color, are used, by default both will start with yellow so one needs to choose the colours manually using on of the arguments (colour or fill_colour).
-#' @param fill_colours Colours that should be used for aes fill in ggplot. Default is gx_colors(). If both aes, fill and color, are used, by default both will start with yellow so one needs to choose the colours manually using on of the arguments (colour or fill_colour).
-#' @param legend_rows How many rows should the legend have. Does only work if plot is not null.
-#' @param title Add plot title. Does only work if plot is not null.
-#' @param subtitle add subtitle. Only works if plot is not nll.
-#' @param x_title x-axis title. Does only work if plot is not null.
-#' @param y1_title y1-axis title. Does only work if plot is not null.
+#' @param rect_line_colours Colour of horizontal help lines. Default "#7F7F7F".
+#' @param rect_line_width Width of major grid lines. Different widths needed for various outputs; default 0.0001.
+#' @param panel_background Background colour of plot area. Default "white".
+#' @param colours Colours that should be used for `aes` color in ggplot. Default gx_colors(). If both `aes` (`fill` and `color`), are used, by default both will start with yellow so one needs to choose the colours manually using on of the arguments (colour or fill_colour).
+#' @param fill_colours Colours that should be used for aes fill in ggplot. Default is gx_colors(). If both `aes` (`fill` and `color`), are used, by default both will start with yellow so one needs to choose the colours manually using on of the arguments (colour or fill_colour).
+#' @param legend_rows How many rows should the legend have. Does only work if plot is not NULL.
+#' @param title Add plot title. Does only work if plot is not NULL.
+#' @param subtitle Add subtitle. Only works if plot is not NULL.
+#' @param x_title x-axis title. Does only work if plot is not NULL.
+#' @param y1_title y1-axis title. Does only work if plot is not NULL.
 # @param scale_y_continuous If TRUE the y-axis is adjusted such that grid lines are at the bottom and top of the graph (as in Excel). Only applies if plot is not NULL. Default is TRUE.
 # @param scale_x_auto If TRUE then x axis will be scaled automatically. Currently only works with Date, continous and discrete. Others might be problematic (such as yearqtr-format).
-#' @param language Format of Date and decimal point. By default NULL. In the default case system settings will be applied.
+#' @param language Format of Date and decimal point. Default NULL. In the default case system settings will be applied.
 #'
 #' @return Return RBI theme to add to ggplot object.
 #' @export

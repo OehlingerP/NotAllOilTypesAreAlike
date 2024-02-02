@@ -20,9 +20,9 @@ knitr::opts_chunk$set(
 library(NotAllOilTypesAreAlike)
 ```
 
-The goal of this vignette is to approximate the welfare losses of one specific
+The goal of this vignette is to approximate the production losses of one specific
 scenario. For this example, we first estimate the elasticities of substitution 
-for Germany and then approximate the welfare loss for the scenario where 
+for Germany and then approximate the production loss for the scenario where 
 Germany loses access to Russian crude oil.
 
 ## Prepare the Dataset
@@ -140,7 +140,7 @@ As we see in the above example, in some instances the elasticity cannot be
 estimated. This is the case when less then three varieties are available. In 
 this case `sigma` cannot be estimated using Feenstra's method.
 
-## Approximation of welfare loss
+## Approximation of production loss
 
 We first correct Russian Federation Oil Types. According to reports from Bruegel
 almost all crude oil imported from Russia is Urals. Therefore, this seems to be 

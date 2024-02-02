@@ -1,4 +1,4 @@
-#' Estimate welfare differences for nested CES vs standard CES
+#' Estimate production differences for nested CES vs standard CES
 #'
 #' @param x data.frame; data.frame of interest
 #' @param x_diff data.frame; data with an added/deleted variety/variety group

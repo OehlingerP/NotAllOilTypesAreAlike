@@ -1,7 +1,7 @@
 #' Global Oil Infrastructure Tracker, Global Energy Monitor, June 2022 release.
 #'
-#' Contiaining information on pipeline connections arround the world. Visit
-#' Global Energy Monitor for a variable description.
+#' Contains information on pipeline connections around the world. Visit
+#' Global Energy Monitor for a definition of the variables.
 #'
 #' @format ## `oil_ngl_pipelines`
 #'    A data frame with 92 rows and 35 columns:

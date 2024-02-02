@@ -1,10 +1,10 @@
-#' Calculate the elsticity of substitution using the method described in
+#' Calculate the elasticity of substitution using the method described in
 #'    Feenstra (1994) New Product Varieties and the Measurement of International
 #'    Prices.
 #' @param df data.frame; trade data from which to estimate elasticities of
 #'    substitution for a specific variety (see details).
 #' @param t_name char; name of time column must be in date-format.
-#' @param v_name char; name of variety column Can be countries as in Feenstra
+#' @param v_name char; name of variety column. Can be countries as in Feenstra
 #'    (1994) but also more granular import data can be used.
 #' @param p_name char; name of price column
 #' @param q_name char; name of quantity column
@@ -20,10 +20,10 @@
 #'    B-W 2006)
 #' @param sigma_step num; step size for sigma grid search. Default 1 (as in
 #'    B-W 2006)
-#' @param rho_min num; minimum rho for grid search (>= 0). Defaults to 0.
-#' @param rho_max num; maximum rho for grid search (< 1). Defaults to 0.99.
+#' @param rho_min num; minimum rho for grid search (>= 0). Default 0.
+#' @param rho_max num; maximum rho for grid search (< 1). Default 0.99.
 #' @param rho_step num; step size for rho grid search. Default 0.01.
-#' @details To follow Feenstra (1994) the data.frame should contain imports
+#' @details Following Feenstra (1994), the data.frame should contain imports
 #'    of only one specific country (destination) and one product type
 #'    (e.g. TV's).
 #' @export

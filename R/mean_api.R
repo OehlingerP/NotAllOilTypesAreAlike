@@ -1,13 +1,13 @@
-#' Calculates the mean of API gravity of different types of crude oil.
+#' Calculates the mean of API gravity for different types of crude oil.
 #' @param x num; numeric vector
 #' @param weight num; weighting vector
 #' @param na.rm	logical evaluating to TRUE or FALSE indicating whether NA values
 #'    should be stripped before the computation proceeds.
-#' @details As API gravity cannot be added linearly it is necessary to convert
+#' @details As API gravity cannot be added linearly, it is necessary to convert
 #'    to specific gravity, then calculate means and only then convert back to
 #'    API gravity.
 #'    In practice, the difference between this method and taking means directly
-#'    may not result into to large differences due to similarity of crude oils.
+#'    will not result in large differences due to similarity of crude oils.
 #' @export
 
 mean_api <- function( x,

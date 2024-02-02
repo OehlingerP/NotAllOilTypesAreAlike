@@ -1,7 +1,7 @@
 #' Eurostat Crude Oil Imports
 #'
-#' A subset of crude oil imports provided by Eurostat
-#' The dataset was filtered to Total EU imports.
+#' A subset of crude oil imports provided by Eurostat.
+#' We applied a filter to the dataset, selecting only Total EU imports.
 #'
 #' @format ## `eurostat_crude_oil_imports`
 #'    A data frame with 17,277 rows and 8 columns:

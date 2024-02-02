@@ -341,10 +341,11 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(NotAllOilTypesAreAlike)</span></code></pre></div>
-<p>The goal of this vignette is to approximate the welfare losses of one
-specific scenario. For this example, we first estimate the elasticities
-of substitution for Germany and then approximate the welfare loss for
-the scenario where Germany loses access to Russian crude oil.</p>
+<p>The goal of this vignette is to approximate the production losses of
+one specific scenario. For this example, we first estimate the
+elasticities of substitution for Germany and then approximate the
+production loss for the scenario where Germany loses access to Russian
+crude oil.</p>
 <div id="prepare-the-dataset" class="section level2">
 <h2>Prepare the Dataset</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">merge_quality_quantity</span>() <span class="sc">%&gt;%</span></span>
@@ -470,8 +471,8 @@ cannot be estimated. This is the case when less then three varieties are
 available. In this case <code>sigma</code> cannot be estimated using
 Feenstra’s method.</p>
 </div>
-<div id="approximation-of-welfare-loss" class="section level2">
-<h2>Approximation of welfare loss</h2>
+<div id="approximation-of-production-loss" class="section level2">
+<h2>Approximation of production loss</h2>
 <p>We first correct Russian Federation Oil Types. According to reports
 from Bruegel almost all crude oil imported from Russia is Urals.
 Therefore, this seems to be a reasonable assumption to classify German
@@ -522,21 +523,21 @@ CES production function.</p>
 <span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
 <span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a><span class="co">#&gt; other attached packages:</span></span>
-<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a><span class="co">#&gt; [1] NotAllOilTypesAreAlike_0.1.0 tidyr_1.3.0                 </span></span>
-<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a><span class="co">#&gt; [3] lubridate_1.9.2              ggplot2_3.4.3               </span></span>
-<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a><span class="co">#&gt; [5] ggpattern_1.0.1              dplyr_1.1.3                 </span></span>
+<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a><span class="co">#&gt; [1] NotAllOilTypesAreAlike_1.0.0 tidyr_1.3.0                 </span></span>
+<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a><span class="co">#&gt; [3] lubridate_1.9.3              ggplot2_3.4.4               </span></span>
+<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a><span class="co">#&gt; [5] ggpattern_1.0.1              dplyr_1.1.4                 </span></span>
 <span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb9-24"><a href="#cb9-24" tabindex="-1"></a><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
-<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a><span class="co">#&gt;  [1] gtable_0.3.4      jsonlite_1.8.7    compiler_4.3.1    zip_2.3.0        </span></span>
-<span id="cb9-26"><a href="#cb9-26" tabindex="-1"></a><span class="co">#&gt;  [5] Rcpp_1.0.11       tidyselect_1.2.0  jquerylib_0.1.4   scales_1.2.1     </span></span>
+<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a><span class="co">#&gt;  [1] gtable_0.3.4      jsonlite_1.8.8    compiler_4.3.1    zip_2.3.0        </span></span>
+<span id="cb9-26"><a href="#cb9-26" tabindex="-1"></a><span class="co">#&gt;  [5] Rcpp_1.0.12       tidyselect_1.2.0  jquerylib_0.1.4   scales_1.3.0     </span></span>
 <span id="cb9-27"><a href="#cb9-27" tabindex="-1"></a><span class="co">#&gt;  [9] yaml_2.3.7        fastmap_1.1.1     R6_2.5.1          generics_0.1.3   </span></span>
 <span id="cb9-28"><a href="#cb9-28" tabindex="-1"></a><span class="co">#&gt; [13] openxlsx_4.2.5.2  knitr_1.43        tibble_3.2.1      car_3.1-2        </span></span>
-<span id="cb9-29"><a href="#cb9-29" tabindex="-1"></a><span class="co">#&gt; [17] munsell_0.5.0     bslib_0.5.1       pillar_1.9.0      rlang_1.1.1      </span></span>
-<span id="cb9-30"><a href="#cb9-30" tabindex="-1"></a><span class="co">#&gt; [21] utf8_1.2.3        stringi_1.7.12    cachem_1.0.8      xfun_0.40        </span></span>
-<span id="cb9-31"><a href="#cb9-31" tabindex="-1"></a><span class="co">#&gt; [25] sass_0.4.7        timechange_0.2.0  cli_3.6.1         withr_2.5.1      </span></span>
-<span id="cb9-32"><a href="#cb9-32" tabindex="-1"></a><span class="co">#&gt; [29] magrittr_2.0.3    digest_0.6.33     grid_4.3.1        rstudioapi_0.15.0</span></span>
-<span id="cb9-33"><a href="#cb9-33" tabindex="-1"></a><span class="co">#&gt; [33] lifecycle_1.0.3   vctrs_0.6.3       evaluate_0.21     glue_1.6.2       </span></span>
-<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a><span class="co">#&gt; [37] abind_1.4-5       carData_3.0-5     fansi_1.0.4       colorspace_2.1-0 </span></span>
+<span id="cb9-29"><a href="#cb9-29" tabindex="-1"></a><span class="co">#&gt; [17] munsell_0.5.0     bslib_0.5.1       pillar_1.9.0      rlang_1.1.3      </span></span>
+<span id="cb9-30"><a href="#cb9-30" tabindex="-1"></a><span class="co">#&gt; [21] utf8_1.2.4        stringi_1.8.3     cachem_1.0.8      xfun_0.40        </span></span>
+<span id="cb9-31"><a href="#cb9-31" tabindex="-1"></a><span class="co">#&gt; [25] sass_0.4.7        timechange_0.3.0  cli_3.6.2         withr_3.0.0      </span></span>
+<span id="cb9-32"><a href="#cb9-32" tabindex="-1"></a><span class="co">#&gt; [29] magrittr_2.0.3    digest_0.6.34     grid_4.3.1        rstudioapi_0.15.0</span></span>
+<span id="cb9-33"><a href="#cb9-33" tabindex="-1"></a><span class="co">#&gt; [33] lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23     glue_1.7.0       </span></span>
+<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a><span class="co">#&gt; [37] abind_1.4-5       carData_3.0-5     fansi_1.0.6       colorspace_2.1-0 </span></span>
 <span id="cb9-35"><a href="#cb9-35" tabindex="-1"></a><span class="co">#&gt; [41] rmarkdown_2.24    purrr_1.0.2       tools_4.3.1       pkgconfig_2.0.3  </span></span>
 <span id="cb9-36"><a href="#cb9-36" tabindex="-1"></a><span class="co">#&gt; [45] htmltools_0.5.6</span></span></code></pre></div>
 </div>

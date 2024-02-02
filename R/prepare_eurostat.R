@@ -1,10 +1,10 @@
 #' Import and prepare Eurostat crude oil import data.
-#' @param only_eu log; if FALSE column COMP_NR will be removed. That is
-#'    necessary if the original dataset is used. Here we just use a subsample
-#'    and consider only imports into the whole European Union.
+#' @param only_eu log; if FALSE column COMP_NR will be removed. Necessary if the
+#'    original dataset is used. Here we just use a subsample and consider only
+#'    imports into the European Union as a whole.
 #' @details
-#' This function just renames variables and matches country names to country
-#'    codes and creates some new variables from existing ones but no data
+#' This function just renames variables, matches country names to country
+#'    codes and creates some new variables from existing ones. No data
 #'    transformations are applied.
 #' @export
 
