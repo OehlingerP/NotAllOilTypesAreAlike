@@ -9,11 +9,11 @@ Recognizing that many economists may not be familiar with R's package framework,
 
 ## How to install
 
-Just run `devtools::install_github("OehlingerP/NotAllOilTypesAreAlike")`. If `devtools` is not yet install you need to run `install.packages("devtools")` before. Typically installed in less than 1 minute.
+Just run `devtools::install_github("OehlingerP/NotAllOilTypesAreAlike")`. If `devtools` is not yet install you need to run `install.packages("devtools")` before. Typically installed in less than one minute (on a "normal" desktop computer).
 
 ## Demo
 
-Demos can be found in the `vignettes` folder. There is one demo for replicating all figures and there is one demo explaining the usage of the main function. Also included in this folder are the final HTML files. So no R-installation is needed to look at the demos. If the .Rmd files are run in R the run time is <1 min.
+Demos can be found in the `vignettes` folder. There is one demo for replicating all figures and there is one demo explaining the usage of the main function. Also included in this folder are the final HTML files. So no R-installation is needed to look at the demos. If the .Rmd files are executed, the run time on a "normal" desktop computer is less than one min.
 
 ## Package Manual
 
