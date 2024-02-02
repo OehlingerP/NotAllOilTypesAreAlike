@@ -28,45 +28,45 @@ gx_theme(
 )
 }
 \arguments{
-\item{plot}{ggplot object. By default Null and gx_theme can be assigned to plot but otherwise gx_theme will create it's own plot.}
+\item{plot}{ggplot object. By default Null and gx_theme can be assigned to plot but otherwise gx_theme will create its own plot.}
 
-\item{print_x}{Show x-axis. By default TRUE.}
+\item{print_x}{Show x-axis. Default TRUE.}
 
-\item{print_y}{Show y-axis. By default TRUE.}
+\item{print_y}{Show y-axis. Default TRUE.}
 
-\item{legend_title}{Whether to include a legend title or not default is FALSE.}
+\item{legend_title}{Whether to include a legend title or not default FALSE.}
 
-\item{legend_position}{Legend position. Default is bottom.}
+\item{legend_position}{Legend position. Default "bottom".}
 
-\item{text_size}{Fontsize. Default is 14.}
+\item{text_size}{Fontsize. Default 14.}
 
-\item{theme}{"dark" or "light" theme. Defaults to "light".}
+\item{theme}{"dark" or "light" theme. Default "light".}
 
-\item{text_colour}{Text colour. Default is black.}
+\item{text_colour}{Text colour. Default "black".}
 
 \item{legend_line_width}{Width of line in legend.}
 
-\item{rect_line_colours}{Colour of horizontal help lines. Default is #7F7F7F.}
+\item{rect_line_colours}{Colour of horizontal help lines. Default "#7F7F7F".}
 
-\item{rect_line_width}{Width of major grid lines. Different widths needed for various outputs; by default 0.0001.}
+\item{rect_line_width}{Width of major grid lines. Different widths needed for various outputs; default 0.0001.}
 
-\item{colours}{Colours that should be used for aes color in ggplot. Default is gx_colors(). If both aes, fill and color, are used, by default both will start with yellow so one needs to choose the colours manually using on of the arguments (colour or fill_colour).}
+\item{colours}{Colours that should be used for `aes` color in ggplot. Default gx_colors(). If both `aes` (`fill` and `color`), are used, by default both will start with yellow so one needs to choose the colours manually using on of the arguments (colour or fill_colour).}
 
-\item{fill_colours}{Colours that should be used for aes fill in ggplot. Default is gx_colors(). If both aes, fill and color, are used, by default both will start with yellow so one needs to choose the colours manually using on of the arguments (colour or fill_colour).}
+\item{fill_colours}{Colours that should be used for aes fill in ggplot. Default is gx_colors(). If both `aes` (`fill` and `color`), are used, by default both will start with yellow so one needs to choose the colours manually using on of the arguments (colour or fill_colour).}
 
-\item{legend_rows}{How many rows should the legend have. Does only work if plot is not null.}
+\item{legend_rows}{How many rows should the legend have. Does only work if plot is not NULL.}
 
-\item{title}{Add plot title. Does only work if plot is not null.}
+\item{title}{Add plot title. Does only work if plot is not NULL.}
 
-\item{subtitle}{add subtitle. Only works if plot is not nll.}
+\item{subtitle}{Add subtitle. Only works if plot is not NULL.}
 
-\item{x_title}{x-axis title. Does only work if plot is not null.}
+\item{x_title}{x-axis title. Does only work if plot is not NULL.}
 
-\item{y1_title}{y1-axis title. Does only work if plot is not null.}
+\item{y1_title}{y1-axis title. Does only work if plot is not NULL.}
 
-\item{language}{Format of Date and decimal point. By default NULL. In the default case system settings will be applied.}
+\item{language}{Format of Date and decimal point. Default NULL. In the default case system settings will be applied.}
 
-\item{panel_background}{Background colour of plot area. Default is white.}
+\item{panel_background}{Background colour of plot area. Default "white".}
 }
 \value{
 Return RBI theme to add to ggplot object.

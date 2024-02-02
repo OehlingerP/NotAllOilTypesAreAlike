@@ -27,7 +27,7 @@
 eurostat_crude_oil_imports
 }
 \description{
-A subset of crude oil imports provided by Eurostat
-The dataset was filtered to Total EU imports.
+A subset of crude oil imports provided by Eurostat.
+We applied a filter to the dataset, selecting only Total EU imports.
 }
 \keyword{datasets}

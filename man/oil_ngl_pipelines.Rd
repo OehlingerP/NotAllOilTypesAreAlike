@@ -15,7 +15,7 @@
 oil_ngl_pipelines
 }
 \description{
-Contiaining information on pipeline connections arround the world. Visit
-Global Energy Monitor for a variable description.
+Contains information on pipeline connections around the world. Visit
+Global Energy Monitor for a definition of the variables.
 }
 \keyword{datasets}

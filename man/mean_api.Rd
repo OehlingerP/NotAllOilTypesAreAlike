@@ -2,7 +2,7 @@
 % Please edit documentation in R/mean_api.R
 \name{mean_api}
 \alias{mean_api}
-\title{Calculates the mean of API gravity of different types of crude oil.}
+\title{Calculates the mean of API gravity for different types of crude oil.}
 \usage{
 mean_api(x, weight = NULL, na.rm = FALSE)
 }
@@ -15,12 +15,12 @@ mean_api(x, weight = NULL, na.rm = FALSE)
 should be stripped before the computation proceeds.}
 }
 \description{
-Calculates the mean of API gravity of different types of crude oil.
+Calculates the mean of API gravity for different types of crude oil.
 }
 \details{
-As API gravity cannot be added linearly it is necessary to convert
+As API gravity cannot be added linearly, it is necessary to convert
    to specific gravity, then calculate means and only then convert back to
    API gravity.
    In practice, the difference between this method and taking means directly
-   may not result into to large differences due to similarity of crude oils.
+   will not result in large differences due to similarity of crude oils.
 }

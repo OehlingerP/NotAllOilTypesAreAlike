@@ -2,7 +2,7 @@
 % Please edit documentation in R/merge_quality_quantity.R
 \name{merge_quality_quantity}
 \alias{merge_quality_quantity}
-\title{Merge Quality and Quantity data and adjust Russian missspecification}
+\title{Merge Quality and Quantity data and adjust Russian misspecification}
 \usage{
 merge_quality_quantity(share_urals = 0.7)
 }
@@ -11,14 +11,14 @@ merge_quality_quantity(share_urals = 0.7)
 should be treated as Urals crude oil}
 }
 \description{
-Merge Quality and Quantity data and adjust Russian missspecification
+Merge Quality and Quantity data and adjust Russian misspecification
 }
 \details{
+80% of imports from Russia are Urals"
 Most imports from Russia are classified as "Other Russian Crude Oil". Thus,
-no quality can be assigned. However, various EU Institutions stated that the
-largest share (more than 80%) of the crude oil imported from Russia is of
-type Urlas. Also the more recent data on Eurostat supports this fact.
-Therefore, we make a conservative assumption and treat 70% of all Russian
-imports as Urlas crude oil. This parameter can be varied for robustness
-checks. Lowering it to 50% does not impair our results.
+no quality can be assigned. However, various EU Institutions state that 80\%
+of imports from Russia are Urals. Also the more recent data on Eurostat
+supports this fact. Therefore, we conservatively assume that 70\% of oil
+imports from Russia are Urals. This parameter can be varied
+for robustness checks. Lowering it to 50\% does not impair our results.
 }

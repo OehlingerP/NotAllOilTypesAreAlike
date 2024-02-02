@@ -12,8 +12,8 @@ Import and combine raw data files from the Crude Oil Import Register (data
    from 2013 to 2019)
 }
 \details{
-No data transformations are implemented. This function solely imports all
+No data transformations are applied. This function solely imports all
    Excel files and consolidates them into one data.frame. The ultimate
    dataset is included with the package installation and can be accessed
-   directly. This function serves exclusively for reproducibility purposes.
+   directly. This function serves exclusively for replication purposes.
 }
