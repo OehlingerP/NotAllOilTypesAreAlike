@@ -467,7 +467,7 @@ relvant types.</p>
 <span id="cb6-45"><a href="#cb6-45" tabindex="-1"></a><span class="co">#&gt; medium sour   medium sour Germany</span></span>
 <span id="cb6-46"><a href="#cb6-46" tabindex="-1"></a><span class="co">#&gt; NA NA               NA NA Germany</span></span></code></pre></div>
 <p>As we see in the above example, in some instances the elasticity
-cannot be estimated. This is the case when less then three varieties are
+cannot be estimated. This is the case when less than three varieties are
 available. In this case <code>sigma</code> cannot be estimated using
 Feenstra’s method.</p>
 </div>
@@ -483,18 +483,18 @@ imports from Russia as Urals crude oil.</p>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>         <span class="at">type =</span> <span class="fu">ifelse</span>(<span class="st">`</span><span class="at">Country of Origin</span><span class="st">`</span> <span class="sc">==</span> <span class="st">&quot;Russian Federation&quot;</span>, <span class="st">&quot;medium sour&quot;</span>, type))</span></code></pre></div>
 <p>Now we use our estimates from above to approximate production
 disruptions.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>df_welfare <span class="ot">&lt;-</span> <span class="fu">est_welfare</span>(<span class="at">x          =</span> df,</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>                          <span class="at">x_diff     =</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country of Origin</span><span class="st">`</span> <span class="sc">!=</span> <span class="st">&quot;Russian Federation&quot;</span>),</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>                          <span class="at">quantity   =</span> <span class="st">&quot;Volume (1000 bbl)&quot;</span>,</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>                          <span class="at">type       =</span> <span class="st">&quot;type&quot;</span>,</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>                          <span class="at">sigma_ces  =</span> ela_country<span class="sc">$</span>sigma,</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>                          <span class="at">sigma_nces =</span> <span class="fu">mean</span>(ela_within<span class="sc">$</span>sigma, <span class="at">na.rm =</span> T),</span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>                          <span class="at">gamma_nces =</span> ela_type<span class="sc">$</span>sigma)</span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>df_prod_loss <span class="ot">&lt;-</span> <span class="fu">est_prod_loss</span>(<span class="at">x          =</span> df,</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>                              <span class="at">x_diff     =</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country of Origin</span><span class="st">`</span> <span class="sc">!=</span> <span class="st">&quot;Russian Federation&quot;</span>),</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>                              <span class="at">quantity   =</span> <span class="st">&quot;Volume (1000 bbl)&quot;</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>                              <span class="at">type       =</span> <span class="st">&quot;type&quot;</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>                              <span class="at">sigma_ces  =</span> ela_country<span class="sc">$</span>sigma,</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>                              <span class="at">sigma_nces =</span> <span class="fu">mean</span>(ela_within<span class="sc">$</span>sigma, <span class="at">na.rm =</span> T),</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>                              <span class="at">gamma_nces =</span> ela_type<span class="sc">$</span>sigma)</span>
 <span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>df_welfare</span>
-<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="co">#&gt;   Nested CES [welfare diff in %] CES [welfare diff in %]</span></span>
-<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="co">#&gt; 1                         -36.06                  -33.67</span></span></code></pre></div>
-<p><code>est_welfare</code> estimates the loss in overall production
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>df_prod_loss</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="co">#&gt;   Nested CES [production diff in %] CES [production diff in %]</span></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="co">#&gt; 1                            -36.06                     -33.67</span></span></code></pre></div>
+<p><code>est_prod_loss</code> estimates the loss in overall production
 from a CES and a nested CES case for two different datasets. In the
 first we used all data available and to run our scenario we removed
 Russia from the second dataset. Now the impact of our results is the

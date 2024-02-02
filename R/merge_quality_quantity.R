@@ -3,7 +3,6 @@
 #' @param share_urals num; how much of Russian crude oil reported as Other
 #'    should be treated as Urals crude oil
 #' @details
-#' 80% of imports from Russia are Urals"
 #' Most imports from Russia are classified as "Other Russian Crude Oil". Thus,
 #' no quality can be assigned. However, various EU Institutions state that 80\%
 #' of imports from Russia are Urals. Also the more recent data on Eurostat

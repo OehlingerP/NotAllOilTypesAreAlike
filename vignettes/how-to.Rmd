@@ -137,7 +137,7 @@ ela_within
 ```
 
 As we see in the above example, in some instances the elasticity cannot be 
-estimated. This is the case when less then three varieties are available. In 
+estimated. This is the case when less than three varieties are available. In 
 this case `sigma` cannot be estimated using Feenstra's method.
 
 ## Approximation of production loss
