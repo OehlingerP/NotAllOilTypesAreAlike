@@ -47,7 +47,7 @@ df <- df %>%
          type = ifelse(`Country of Origin` == "Russian Federation", "medium sour", type))
 
 
-# IDEA: Estimate the welfare changes for dropping a whole nest (namely medium-sour crude oil)
+# IDEA: Estimate the production changes for dropping a whole nest (namely medium-sour crude oil)
 # and compare it with the case of dropping Russia (where we treat all Russian imports as Urals)
 
 # create data frame of varieties
@@ -95,13 +95,13 @@ for(i in 1:nrow(df_final)){
     filter(`Reporting Country` == df_final$country[i])
 
   # drop medium sour
-  temp <- est_welfare(x = df_sim,
-                      x_diff = df_sim %>% filter(type != "medium sour"),
-                      quantity = "Volume (1000 bbl)",
-                      type = "type",
-                      sigma_ces = df_final$sigma_feenstra[i],
-                      sigma_nces = df_final$sigma[i],
-                      gamma_nces = df_final$gamma[i])
+  temp <- est_prod_loss(x = df_sim,
+                        x_diff = df_sim %>% filter(type != "medium sour"),
+                        quantity = "Volume (1000 bbl)",
+                        type = "type",
+                        sigma_ces = df_final$sigma_feenstra[i],
+                        sigma_nces = df_final$sigma[i],
+                        gamma_nces = df_final$gamma[i])
 
   df_final$`remove all medium sour crude oil`[i] <- round(temp[1] - temp[2], 2)
 
@@ -109,14 +109,14 @@ for(i in 1:nrow(df_final)){
 
 
   # drop all Russian crude oil treating all as Urals
-  temp <- est_welfare(x = df_sim,
-                      x_diff = df_sim %>%
-                        filter(`Country of Origin` != "Russian Federation"),
-                      quantity = "Volume (1000 bbl)",
-                      type = "type",
-                      sigma_ces = df_final$sigma_feenstra[i],
-                      sigma_nces = df_final$sigma[i],
-                      gamma_nces = df_final$gamma[i])
+  temp <- est_prod_loss(x = df_sim,
+                        x_diff = df_sim %>%
+                          filter(`Country of Origin` != "Russian Federation"),
+                        quantity = "Volume (1000 bbl)",
+                        type = "type",
+                        sigma_ces = df_final$sigma_feenstra[i],
+                        sigma_nces = df_final$sigma[i],
+                        gamma_nces = df_final$gamma[i])
 
   df_final$`remove Russia treating all as Urals`[i] <- round(temp[1] - temp[2], 2)
 

@@ -37,4 +37,4 @@ source("table_1_hedonic_pricing_model.R")
 source("table_2_sigma_estimation.R")
 
 # table 3
-source("table_3_welfare_estimation.R")
+source("table_3_prod_loss_estimation.R")

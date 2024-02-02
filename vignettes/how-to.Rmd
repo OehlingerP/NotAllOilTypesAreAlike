@@ -157,23 +157,23 @@ df <- df %>%
 Now we use our estimates from above to approximate production disruptions.
 
 ```{r}
-df_welfare <- est_welfare(x          = df,
-                          x_diff     = df %>% filter(`Country of Origin` != "Russian Federation"),
-                          quantity   = "Volume (1000 bbl)",
-                          type       = "type",
-                          sigma_ces  = ela_country$sigma,
-                          sigma_nces = mean(ela_within$sigma, na.rm = T),
-                          gamma_nces = ela_type$sigma)
+df_prod_loss <- est_prod_loss(x          = df,
+                              x_diff     = df %>% filter(`Country of Origin` != "Russian Federation"),
+                              quantity   = "Volume (1000 bbl)",
+                              type       = "type",
+                              sigma_ces  = ela_country$sigma,
+                              sigma_nces = mean(ela_within$sigma, na.rm = T),
+                              gamma_nces = ela_type$sigma)
 
-df_welfare
+df_prod_loss
 ```
 
-`est_welfare` estimates the loss in overall production from a CES and a nested
+`est_prod_loss` estimates the loss in overall production from a CES and a nested
 CES case for two different datasets. In the first we used all data available and 
 to run our scenario we removed Russia from the second dataset. Now the impact of 
 our results is the difference of those two estimates. Thus, taking crude oil 
 quality into account, production disruptions are 
-`r df_welfare[1,1] - df_welfare[1,2]` higher than using a standard CES production 
+`r df_prod_loss[1,1] - df_prod_loss[1,2]` higher than using a standard CES production 
 function.
 
 # Session Info

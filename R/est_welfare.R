@@ -9,13 +9,13 @@
 #' @param gamma_nces num; across product group elasticity of substitution (nested CES)
 #' @export
 
-est_welfare <- function(x,
-                        x_diff,
-                        quantity,
-                        type,
-                        sigma_ces,
-                        sigma_nces,
-                        gamma_nces){
+est_prod_loss <- function(x,
+                          x_diff,
+                          quantity,
+                          type,
+                          sigma_ces,
+                          sigma_nces,
+                          gamma_nces){
 
   x <- x[ , c(quantity, type)]
   x_diff <- x_diff[ , c(quantity, type)]
@@ -55,8 +55,8 @@ est_welfare <- function(x,
     as.numeric()
 
 
-  return(data.frame("Nested CES [welfare diff in %]" = round((df_utility_nested_diff / df_utility_nested - 1)*100, 2),
-                    "CES [welfare diff in %]" = round((df_utility_feenstra_diff / df_utility_feenstra - 1)*100, 2),
+  return(data.frame("Nested CES [production diff in %]" = round((df_utility_nested_diff / df_utility_nested - 1)*100, 2),
+                    "CES [production diff in %]" = round((df_utility_feenstra_diff / df_utility_feenstra - 1)*100, 2),
                     check.names = F)
   )
 
