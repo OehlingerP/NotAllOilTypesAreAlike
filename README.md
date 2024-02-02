@@ -15,4 +15,8 @@ Just run `devtools::install_github("OehlingerP/NotAllOilTypesAreAlike")`. If `de
 
 Demos can be found in the `vignettes` folder. There is one demo for replicating all figures and there is one demo explaining the usage of the main function. Also included in this folder are the final HTML files. So no R-installation is needed to look at the demos. If the .Rmd files are run in R the run time is <1 min.
 
+## Package Manual
+
+The package manual is stored in the vignettes folder and contains a description of all function used to replicate the tables and figures shown in the paper. Furthermore, all data used within this package is briefly explained as well. 
+
 
