@@ -1,4 +1,4 @@
-library(OilTradeQuality)
+library(NotAllOilTypesAreAlike)
 
 df_raw <-
   readRDS(file = "data/eurostat_eu_crude_oil_imports (update).Rdata")
@@ -32,13 +32,13 @@ df_ea <- df %>%
 df <- rbind(df, df_ea)
 
 # load elasticity estimates
-df_ela <- data.frame("country" = c("AT", "BE", "FR", "DE", "IT", "EA"),
+df_ela <- data.frame("repCountryIso" = c("AT", "BE", "FR", "DE", "IT", "EA"),
                      "sigma_ces" = c(5.58, 16.4, 30.9, 18.8, 30, 36.2),
                      "gamma_nces" = c(2.8, 9.7, 3.9, 5.8, 6.1, 4.2),
                      "sigma_nces" = c(5.1, 53.2, 19.2, 25.5, 79.3, 45.8))
 
 df_year <- df %>%
-  group_by(year, repCountryIso, repCountry, sourceCountryIso, sourceCountry,
+  group_by(year, repCountryIso, sourceCountryIso,
            crudeoil, oilType) %>%
   summarize(p = sum(avgPriceBbl*volume/sum(volume, na.rm = T), na.rm = T),
             q = sum(volume, na.rm = T)) %>%
@@ -52,7 +52,7 @@ COUNTRY <- "Euro Area"
 TASTE_YEAR <- 20132019
 
 # load taste parameters for the reference period ---------------------
-df_taste <- readRDS(file = "data/tastes_nces.RData") %>%
+df_taste <- read.csv(file = "data/tastes_nces.csv") %>%
   filter(year == 20132019) %>%
   select(country, good, taste) %>%
   mutate(country = ifelse(country == "Austria", "AT",
@@ -70,25 +70,20 @@ df_calc <- df_year %>%
   mutate(taste = ifelse(is.na(taste), 1, taste)) %>%
   na.omit()
 
-df_p_taste <- NULL
-
 tmp <- df_calc %>%
-  filter(repCountryIso == COUNTRY)
+  filter(repCountryIso == "EA")
 
 tmp <- price_index_nces_ces_comparison(x = tmp,
                                        time = "year",
                                        quantity = "q",
                                        price    = "p",
                                        variety  = "crudeoil",
-                                       variety_ces = "sourceCountry",
+                                       variety_ces = "sourceCountryIso",
                                        good     = "oilType",
                                        taste    = "taste",
                                        sigma_ces = "sigma_ces",
                                        sigma_nces    = "sigma_nces",
                                        gamma_nces    = "gamma_nces")
 
-tmp <- cbind("country" = COUNTRY, tmp)
-
-df_p_taste <- rbind(df_p_taste, tmp)
-
+tmp
 
